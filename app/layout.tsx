@@ -11,7 +11,8 @@ export const metadata = {
   openGraph: {
     images: [
       {
-        url: './web-image.png', 
+        // 💡 เปลี่ยนตรงนี้เป็น URL จริงของเว็บคุณที่อัปโหลดขึ้น Vercel แล้วตามด้วยชื่อรูปภาพ
+        url: 'https://phailin1003.github.io/phailin-portfolio/web-image.png', 
         width: 1200,
         height: 630,
         alt: 'Phailin KHODYOTHA Portfolio Preview',
@@ -20,7 +21,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    images: ['./web-image.png'],
+    // 💡 เปลี่ยนตรงนี้ให้เหมือนข้างบนด้วยครับ
+    images: ['https://phailin1003.github.io/phailin-portfolio/web-image.png'],
   },
 }
 const mono = JetBrains_Mono({
