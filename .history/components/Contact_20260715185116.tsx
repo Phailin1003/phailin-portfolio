@@ -32,18 +32,7 @@ export default function Contact() {
       return;
     }
 
-     
     try {
-       // 1. ສ້າງ Format ວັນທີ ແລະ ເວລາ ຂອງ ປັດຈຸບັນ (Format: DD/MM/YYYY, HH:MM)
-      const currentDateTime = new Date().toLocaleString('en-GB', {
-        timeZone: 'Asia/Vientiane', // ກຳນົດເວລາໃຫ້ຖືກຕ້ອງກັບປະເທດລາວ (GMT+7)
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit',
-        hour12: false
-      });
       await emailjs.send(
         SERVICE_ID,
         TEMPLATE_ID,
@@ -52,7 +41,6 @@ export default function Contact() {
           email: form.email,
           title: form.title,
           message: form.message,
-          time: currentDateTime,     // ຈະໄປແທນທີ່ {{time}} ໃນ HTML
           
         },
         PUBLIC_KEY

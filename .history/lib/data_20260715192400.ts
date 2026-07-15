@@ -6,7 +6,7 @@ export const profile = {
   email: "phailinkhodyotha02@gmail.com",
   phone: "+856 20 5486 7757",
   languages: ["English", "Thai"],
-  photoUrl: "./image4.png",
+  photoUrl: "./image.png",
   resumeUrl: "./resume.pdf",
   social: {
     github: "https://github.com/Phailin1003",

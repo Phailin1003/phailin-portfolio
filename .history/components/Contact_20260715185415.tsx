@@ -53,6 +53,8 @@ export default function Contact() {
           title: form.title,
           message: form.message,
           time: currentDateTime,     // ຈະໄປແທນທີ່ {{time}} ໃນ HTML
+          "user.name": form.name,   // ຈະໄປແທນທີ່ {{user.name}} (ຜູ້ສົ່ງຂໍ້ຄວາມ)
+          "comment.date": currentDateTime
           
         },
         PUBLIC_KEY

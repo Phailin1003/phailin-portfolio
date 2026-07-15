@@ -31,10 +31,8 @@ export default function Contact() {
       setStatus("error");
       return;
     }
-
-     
-    try {
-       // 1. ສ້າງ Format ວັນທີ ແລະ ເວລາ ຂອງ ປັດຈຸບັນ (Format: DD/MM/YYYY, HH:MM)
+try {
+      // 1. ສ້າງ Format ວັນທີ ແລະ ເວລາ ຂອງ ປັດຈຸບັນ (Format: DD/MM/YYYY, HH:MM)
       const currentDateTime = new Date().toLocaleString('en-GB', {
         timeZone: 'Asia/Vientiane', // ກຳນົດເວລາໃຫ້ຖືກຕ້ອງກັບປະເທດລາວ (GMT+7)
         day: '2-digit',
@@ -44,6 +42,7 @@ export default function Contact() {
         minute: '2-digit',
         hour12: false
       });
+    try {
       await emailjs.send(
         SERVICE_ID,
         TEMPLATE_ID,
@@ -53,6 +52,8 @@ export default function Contact() {
           title: form.title,
           message: form.message,
           time: currentDateTime,     // ຈະໄປແທນທີ່ {{time}} ໃນ HTML
+          "user.name": form.name,   // ຈະໄປແທນທີ່ {{user.name}} (ຜູ້ສົ່ງຂໍ້ຄວາມ)
+          "comment.date": currentDateTime
           
         },
         PUBLIC_KEY

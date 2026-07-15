@@ -7,7 +7,7 @@ import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", title: "", message: "" });
+  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
 
   function handleChange(
@@ -32,34 +32,21 @@ export default function Contact() {
       return;
     }
 
-     
     try {
-       // 1. ສ້າງ Format ວັນທີ ແລະ ເວລາ ຂອງ ປັດຈຸບັນ (Format: DD/MM/YYYY, HH:MM)
-      const currentDateTime = new Date().toLocaleString('en-GB', {
-        timeZone: 'Asia/Vientiane', // ກຳນົດເວລາໃຫ້ຖືກຕ້ອງກັບປະເທດລາວ (GMT+7)
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit',
-        hour12: false
-      });
       await emailjs.send(
         SERVICE_ID,
         TEMPLATE_ID,
         {
           name: form.name,
           email: form.email,
-          title: form.title,
+          subject: form.subject,
           message: form.message,
-          time: currentDateTime,     // ຈະໄປແທນທີ່ {{time}} ໃນ HTML
-          
         },
         PUBLIC_KEY
       );
 
       setStatus("sent");
-      setForm({ name: "", email: "", title: "", message: "" });
+      setForm({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
       console.error("EmailJS Error:", error);
       setStatus("error");
@@ -230,20 +217,20 @@ export default function Contact() {
  {/* subject */}
             <div>
               <label
-                htmlFor="title"
+                htmlFor="subject"
                 className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted"
               >
                 Subject
               </label>
               <textarea
-                id="title"
-                name="title"
+                id="subject"
+                name="subject"
                 required
                 rows={1}
-                value={form.title}
+                value={form.subject}
                 onChange={handleChange}
                 className="mt-3 w-full rounded-xl border border-border bg-surface/70 px-4 py-3.5 text-sm text-text outline-none resize-none transition-all duration-300 placeholder:text-muted focus:border-amber focus:ring-2 focus:ring-amber/20"
-                placeholder="Project Discussion"
+                placeholder="Tell me about your project..."
               />
             </div>
             {/* Message */}
