@@ -7,11 +7,18 @@ import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", title: "", message: "" });
-  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    title: "",
+    message: "",
+  });
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
+    "idle",
+  );
 
   function handleChange(
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
   }
@@ -20,29 +27,25 @@ export default function Contact() {
     e.preventDefault();
     setStatus("sending");
 
-    // ດຶງຄ່າຈາກ Environment Variables
     const SERVICE_ID = process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID;
     const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID;
     const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY;
 
-    // ກວດສອບຄວາມຖືກຕ້ອງຂອງ Keys ກ່ອນສົ່ງ
     if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
       console.error("Missing EmailJS Environment Variables");
       setStatus("error");
       return;
     }
 
-     
     try {
-       // 1. ສ້າງ Format ວັນທີ ແລະ ເວລາ ຂອງ ປັດຈຸບັນ (Format: DD/MM/YYYY, HH:MM)
-      const currentDateTime = new Date().toLocaleString('en-GB', {
-        timeZone: 'Asia/Vientiane', // ກຳນົດເວລາໃຫ້ຖືກຕ້ອງກັບປະເທດລາວ (GMT+7)
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit',
-        hour12: false
+      const currentDateTime = new Date().toLocaleString("en-GB", {
+        timeZone: "Asia/Vientiane",
+        day: "2-digit",
+        month: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false,
       });
       await emailjs.send(
         SERVICE_ID,
@@ -52,10 +55,9 @@ export default function Contact() {
           email: form.email,
           title: form.title,
           message: form.message,
-          time: currentDateTime,     // ຈະໄປແທນທີ່ {{time}} ໃນ HTML
-          
+          time: currentDateTime,
         },
-        PUBLIC_KEY
+        PUBLIC_KEY,
       );
 
       setStatus("sent");
@@ -70,7 +72,6 @@ export default function Contact() {
     <section id="contact">
       <div className="mx-auto max-w-6xl px-6 py-20">
         <div className="grid gap-12 md:grid-cols-[0.4fr_0.6fr] md:gap-16">
-          
           {/* Left Side: Contact Info & Socials */}
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.25em] text-amber">
@@ -227,7 +228,7 @@ export default function Contact() {
                 />
               </div>
             </div>
- {/* subject */}
+            {/* subject */}
             <div>
               <label
                 htmlFor="title"
@@ -295,7 +296,6 @@ export default function Contact() {
               </div>
             )}
           </form>
-
         </div>
       </div>
     </section>

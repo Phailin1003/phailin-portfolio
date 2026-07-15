@@ -17,13 +17,11 @@ export default function GraphicsPage() {
   const categories = ["All", ...new Set(graphics.map((item) => item.category))];
 
   const filteredGraphics =
-  filter === "All"
-    ? graphics.slice(0, 12)
-    : filter === "Artwork Cars"
-    ? graphics
-        .filter((item) => item.category === "Artwork Cars")
-        .slice(0, 12)
-    : graphics.filter((item) => item.category === filter);
+    filter === "All"
+      ? graphics.slice(0, 12)
+      : filter === "Artwork Cars"
+      ? graphics.filter((item) => item.category === "Artwork Cars").slice(0, 12)
+      : graphics.filter((item) => item.category === filter);
   return (
     <section id="graphics" className="border-b border-border">
       <div className="mx-auto max-w-6xl px-6 py-20">
