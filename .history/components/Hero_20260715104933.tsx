@@ -18,9 +18,9 @@ export default function Hero() {
           <p className="mb-5 font-mono text-xs uppercase tracking-[0.25em] text-amber">
             {profile.role} · {profile.location}
           </p>
-      <h1 className="font-display text-4xl leading-[1.08] tracking-tight text-text sm:text-5xl lg:text-6xl">
-  Hi, I'm <br />
-  <span className="italic text-amber">Phailin KHODYOTHA</span>
+          <h1 className="font-display text-4xl leading-[1.08] tracking-tight text-text sm:text-5xl lg:text-6xl">
+  I'm <span className="italic text-amber">Phailin</span>,
+  crafting digital experiences with <span className="italic text-blue">code</span> and creativity.
 </h1>
           <p className="mt-6 max-w-lg text-base leading-relaxed text-muted">
             {profile.bio}
