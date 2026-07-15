@@ -1,10 +1,12 @@
 import { Resend } from "resend";
-console.log("RESEND_API_KEY:", process.env.RESEND_API_KEY);
-const resend = new Resend(process.env.RESEND_API_KEY);
 
-export async function POST(req: Request) {
+export async function onRequestPost(context: any) {
   try {
-    const { name, email, message } = await req.json();
+    const { name, email, message } = await context.request.json();
+
+    const resend = new Resend(
+      context.env.RESEND_API_KEY
+    );
 
     await resend.emails.send({
       from: "Portfolio Contact <onboarding@resend.dev>",
@@ -12,11 +14,8 @@ export async function POST(req: Request) {
       subject: `New message from ${name}`,
       html: `
         <h2>Portfolio Contact</h2>
-
         <p><b>Name:</b> ${name}</p>
-
         <p><b>Email:</b> ${email}</p>
-
         <p><b>Message:</b></p>
         <p>${message}</p>
       `,
@@ -27,14 +26,13 @@ export async function POST(req: Request) {
     });
 
   } catch (error) {
-    console.error(error);
 
     return Response.json(
       {
-        success: false,
+        success:false
       },
       {
-        status: 500,
+        status:500
       }
     );
   }
