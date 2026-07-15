@@ -1,17 +1,14 @@
 import "./globals.css";
-import type { Metadata } from "next";
 import { JetBrains_Mono, Inter, Fraunces } from "next/font/google";
-import { profile } from "@/lib/data";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: 'Phailin KHODYOTHA | Web Developer Portfolio', 
-  description: 'Welcome to Phailin\'s portfolio website, showcasing my web development work and various projects.', 
+  title: 'Phailin KHODYOTHA | Website Portfolio',
+  description: 'Welcome to Phailin\'s portfolio website, showcasing my web development work and various projects.',
   openGraph: {
     images: [
       {
-        // 💡 เปลี่ยนตรงนี้เป็น URL จริงของเว็บคุณที่อัปโหลดขึ้น Vercel แล้วตามด้วยชื่อรูปภาพ
         url: 'https://phailin1003.github.io/phailin-portfolio/web-image.png', 
         width: 1200,
         height: 630,
@@ -21,7 +18,6 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    // 💡 เปลี่ยนตรงนี้ให้เหมือนข้างบนด้วยครับ
     images: ['https://phailin1003.github.io/phailin-portfolio/web-image.png'],
   },
 }
