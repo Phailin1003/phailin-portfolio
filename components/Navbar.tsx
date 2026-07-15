@@ -2,11 +2,11 @@ import { profile } from "@/lib/data";
 import Link from "next/link";
 
 const navLinks = [
-  { href: "/#about", label: "About" },
-  { href: "/#experience", label: "Experience" },
-  { href: "/#projects", label: "Projects" },
-  { href: "/#graphics", label: "Graphics" },
-  { href: "/#contact", label: "Contact" },
+  { href: "#about", label: "About" },
+  { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
+  { href: "#graphics", label: "Graphics" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export default function Navbar() {
