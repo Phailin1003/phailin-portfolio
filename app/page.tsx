@@ -7,10 +7,6 @@ import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 
-export const metadata = {
-  title: 'Phailin KHODYOTHA | Web Developer Portfolio', 
-  description: 'Welcome to Phailin\'s portfolio website, showcasing my web development work and various projects.', 
-}
 
 export default function Home() {
   return (
