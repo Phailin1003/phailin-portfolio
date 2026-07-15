@@ -141,7 +141,7 @@ export default function Contact() {
             </div>
 
             {/* Social Buttons */}
-            <div className="mt-8 flex gap-5">
+            <div className="mt-8 flex gap-5 md:justify-center justify-center ">
               {/* Github */}
               <a
                 href={profile.social.github}

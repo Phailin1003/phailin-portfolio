@@ -1,7 +1,7 @@
 export const profile = {
   name: "Phailin Khodyotha",
   role: "Frontend Developer / Graphic Designer",
-  location: "Laos",
+  location: "Vientiane Capital, Laos PDR",
   bio: "IT graduate with experience in web development, graphic design, and system support. I build user-friendly websites and support client systems from requirements through to launch.",
   email: "phailinkhodyotha02@gmail.com",
   phone: "+856 20 5486 7757",
@@ -151,7 +151,7 @@ export const projects: Project[] = [
     name: "FM Laos",
     description:
       "Designed and developed a responsive corporate website for a construction company using WordPress. The website showcases the company's services, completed projects, business profile, and contact information with a modern, professional, and mobile-friendly design.",
-    stack: ["WordPress", "Elementor", "CSS", "JavaScript"],
+    stack: ["WordPress", "Elementor", "CSS"],
     href: "https://fm-laos.com/",
     status: "shipped",
   },
