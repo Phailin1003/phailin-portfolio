@@ -5,6 +5,10 @@ import { profile } from "@/lib/data";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+export const metadata = {
+  title: 'Phailin KHODYOTHA | Web Developer Portfolio', 
+  description: 'Welcome to Phailin\'s portfolio website, showcasing my web development work and various projects.', 
+}
 const mono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
@@ -24,10 +28,10 @@ const display = Fraunces({
   variable: "--font-display",
 });
 
-export const metadata: Metadata = {
-  title: `${profile.name} — ${profile.role}`,
-  description: profile.bio,
-};
+// export const metadata: Metadata = {
+//   title: `${profile.name} — ${profile.role}`,
+//   description: profile.bio,
+// };
 
 export default function RootLayout({
   children,
