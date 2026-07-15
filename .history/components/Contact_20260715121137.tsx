@@ -42,9 +42,9 @@ const handleSubmit = async (e: React.FormEvent) => {
     });
 
   } catch (error) {
-  console.log("EmailJS Error:", error);
-  setStatus("error");
-}
+    console.error("EmailJS Error:", error);
+    setStatus("error");
+  }
 };
 
   return (
@@ -335,31 +335,26 @@ const handleSubmit = async (e: React.FormEvent) => {
 
   {/* Button */}
   <button
-     type="submit"
-  disabled={status === "sending"}
+    type="submit"
     className="
- group relative overflow-hidden
- rounded-full
- bg-amber
- px-8 py-3.5
- font-mono
- text-xs
- uppercase
- tracking-[0.2em]
- text-bg
- transition-all
- duration-300
- hover:scale-[1.04]
- hover:shadow-lg
- hover:shadow-amber/30
- disabled:opacity-60
- disabled:cursor-not-allowed
-"
+      group relative overflow-hidden
+      rounded-full
+      bg-amber
+      px-8 py-3.5
+      font-mono
+      text-xs
+      uppercase
+      tracking-[0.2em]
+      text-bg
+      transition-all
+      duration-300
+      hover:scale-[1.04]
+      hover:shadow-lg
+      hover:shadow-amber/30
+    "
   >
     <span className="relative z-10">
-      {status === "sending"
-  ? "Sending..."
-  : "Send Message →"}
+      Send Message →
     </span>
   </button>
 
@@ -375,37 +370,10 @@ const handleSubmit = async (e: React.FormEvent) => {
       "
     >
       <p className="font-mono text-xs text-green">
-        {status === "sent" && (
-  <div
-    className="
-      rounded-lg
-      border border-green/30
-      bg-green/10
-      px-4 py-3
-    "
-  >
-    <p className="font-mono text-xs text-green">
-      ✓ Message sent successfully! I will reply soon.
-    </p>
-  </div>
-)}
+        ✓ Your email client should have opened — send it over!
       </p>
     </div>
   )}
-  {status === "error" && (
-  <div
-    className="
-      rounded-lg
-      border border-red-300/30
-      bg-red-500/10
-      px-4 py-3
-    "
-  >
-    <p className="font-mono text-xs text-red-500">
-      ✕ Failed to send message. Please try again.
-    </p>
-  </div>
-)}
 
 </form>
         </div>

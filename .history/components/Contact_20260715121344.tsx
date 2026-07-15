@@ -42,9 +42,9 @@ const handleSubmit = async (e: React.FormEvent) => {
     });
 
   } catch (error) {
-  console.log("EmailJS Error:", error);
-  setStatus("error");
-}
+    console.error("EmailJS Error:", error);
+    setStatus("error");
+  }
 };
 
   return (
