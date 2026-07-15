@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: 'Phailin KHODYOTHA | Web Developer Portfolio', 
+  title: 'Phailin KHODYOTHA | Portfolio', 
   description: 'Welcome to Phailin\'s portfolio website, showcasing my web development work and various projects.', 
 }
 const mono = JetBrains_Mono({
