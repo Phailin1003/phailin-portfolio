@@ -6,10 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "type": "module"
+    "lint": "eslint"
   },
- 
   "dependencies": {
     "lucide-react": "^1.24.0",
     "next": "16.2.10",
