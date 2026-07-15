@@ -6,8 +6,22 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: 'Phailin KHODYOTHA | Portfolio', 
+  title: 'Phailin KHODYOTHA | Web Developer Portfolio', 
   description: 'Welcome to Phailin\'s portfolio website, showcasing my web development work and various projects.', 
+  openGraph: {
+    images: [
+      {
+        url: './web-image.png', 
+        width: 1200,
+        height: 630,
+        alt: 'Phailin KHODYOTHA Portfolio Preview',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['./web-image.png'],
+  },
 }
 const mono = JetBrains_Mono({
   subsets: ["latin"],
