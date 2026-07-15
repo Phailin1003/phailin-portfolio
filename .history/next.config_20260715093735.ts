@@ -14,8 +14,6 @@ const nextConfig: NextConfig = {
     ],
   },
   output: "export",
-  basePath: "/phailin-portfolio",
-  assetPrefix: "/phailin-portfolio/",
 };
 
 export default nextConfig;
