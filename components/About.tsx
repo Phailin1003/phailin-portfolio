@@ -31,11 +31,13 @@ export default function About() {
             </p>
             <div className="pt-2">
               <a
-                href={profile.resumeUrl}
-                download
+                href="/resume.pdf"
+                target="_blank"
+              rel="noopener noreferrer"
+                download="Phailin_Resume.pdf"
                 className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 font-mono text-xs uppercase tracking-widest text-text transition-colors hover:border-amber hover:text-amber"
               >
-                Download CV
+                Download Resume
                 <span aria-hidden>↓</span>
               </a>
             </div>

@@ -42,7 +42,7 @@ export default function Navbar() {
         </nav>
         <a
           href={profile.resumeUrl}
-          download
+          download="Phailin_Resume.pdf"
           className="hidden md:inline-block rounded-full border border-border px-4 py-2 font-mono text-xs uppercase tracking-widest text-text transition-colors hover:border-amber hover:text-amber"
         >
           Resume
@@ -113,7 +113,9 @@ export default function Navbar() {
           {/* Mobile Resume Link */}
           <a
             href={profile.resumeUrl}
-            download
+            target="_blank"
+            rel="noopener noreferrer"
+            download="Phailin_Resume.pdf"
             className="text-center rounded-full border border-border px-4 py-3 text-text transition-colors hover:border-amber hover:text-amber"
           >
             Resume
