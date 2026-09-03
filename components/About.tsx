@@ -31,7 +31,7 @@ export default function About() {
             </p>
             <div className="pt-2">
               <a
-                href="/resume.pdf"
+                href={profile.resumeUrl}
                 target="_blank"
               rel="noopener noreferrer"
                 download="Phailin_Resume.pdf"

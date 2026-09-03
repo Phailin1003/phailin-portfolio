@@ -33,7 +33,7 @@ export default function Hero() {
               View Projects
             </a>
             <a
-              href="/resume.pdf"
+              href={profile.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="rounded-full border border-border px-6 py-3 font-mono text-xs uppercase tracking-widest text-text transition-colors hover:border-amber hover:text-amber"
