@@ -22,7 +22,7 @@ export default function Experience() {
               </span>
               <div>
                 <h3 className="font-display text-xl text-text">{item.role}</h3>
-                <p className="font-mono text-xs uppercase tracking-widest text-blue">
+                <p className="font-mono font-lao text-xs uppercase tracking-widest text-blue">
                   {item.company}
                 </p>
               </div>

@@ -27,7 +27,14 @@ export type ExperienceItem = {
 };
 export const experience: ExperienceItem[] = [
   {
-    period: "2025 — Present",
+    period: "10.2025 — Present",
+    role: "Website Developer",
+    company: "Freelance - Pixelxpert. Company",
+    description:
+      "Designed, developed, and maintained responsive WordPress websites based on client requirements, including customizing layouts, themes, and functionalities, managing content and updates, troubleshooting issues, and working directly with clients to gather requirements, provide solutions, and deliver user-friendly websites optimized for different devices."
+  },
+  {
+    period: "10.2025 — 08.2026",
     role: "Software Analyst",
     company: "CS Intellect Lao",
     description:

@@ -1,5 +1,5 @@
 import "./globals.css";
-import { JetBrains_Mono, Inter, Fraunces } from "next/font/google";
+import { JetBrains_Mono, Inter, Fraunces, Noto_Sans_Lao } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -39,6 +39,10 @@ const display = Fraunces({
   style: ["normal", "italic"],
   variable: "--font-display",
 });
+const notoSansLao = Noto_Sans_Lao({
+  variable: "--font-noto-sans-lao",
+  subsets: ["lao"],
+});
 
 // export const metadata: Metadata = {
 //   title: `${profile.name} — ${profile.role}`,
@@ -50,13 +54,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="en" className={`${mono.variable} ${sans.variable} ${display.variable}`}>
-      <body className="font-sans bg-bg text-text antialiased">
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-      </body>
-    </html>
-  );
+return (
+  <html lang="lo" className={`${notoSansLao.variable}`}>
+    <body className="font-sans bg-bg text-text antialiased">
+      <Navbar />
+      <main>{children}</main>
+      <Footer />
+    </body>
+  </html>
+);
 }
