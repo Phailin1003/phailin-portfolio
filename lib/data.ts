@@ -1,6 +1,6 @@
 export const profile = {
   name: "Phailin Khodyotha",
-  role: "Frontend Developer / Graphic Designer",
+  role: "Frontend Developer / Graphic Designer / Software Analyst",
   location: "Vientiane Capital, Laos PDR",
   bio: "IT graduate with experience in web development, graphic design, and system support. I build user-friendly websites and support client systems from requirements through to launch.",
   email: "phailinkhodyotha02@gmail.com",
@@ -14,9 +14,6 @@ export const profile = {
     facebook: "https://www.facebook.com/share/1DEs4cvExd/?mibextid=wwXIfr",
     twitter: "",
   },
-
-
-
 };
 
 export type ExperienceItem = {
