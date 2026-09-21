@@ -66,18 +66,18 @@ export const experience: ExperienceItem[] = [
       "Designed EV-related artwork for digital platforms, created social media content and promotional materials, and maintained consistent branding across campaigns.",
   },
   {
-    period: "2023",
-    role: "Frontend Development Intern",
-    company: "Houng Ah Loun Technology",
-    description:
-      "Assisted with front-end web development tasks and supported UI implementation and testing.",
-  },
-  {
-    period: "2022",
+    period: "08.2023 - 10.2023",
     role: "Media Intern",
     company: "STELLA",
     description:
       "Participated in media development and content creation, and assisted with design and digital media tasks.",
+  },
+  {
+    period: "08.2022 - 10.2022",
+    role: "Frontend Development Intern",
+    company: "Houng Ah Loun Technology",
+    description:
+      "Assisted with front-end web development tasks and supported UI implementation and testing.",
   },
 ];
 export type EducationItem = {
